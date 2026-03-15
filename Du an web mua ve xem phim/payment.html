@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thanh toán</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center">Thanh toán vé</h2>
+
+<div class="payment-box">
+
+<p>Phim: <span id="movie"></span></p>
+<p>Ghế: <span id="seats"></span></p>
+<p>Tổng tiền: <span id="total"></span> VND</p>
+
+<h3>Thông tin thanh toán</h3>
+
+<input id="name" placeholder="Họ và tên">
+<input id="email" placeholder="Email">
+
+<button class="btn-book" onclick="pay()">
+Thanh toán
+</button>
+
+</div>
+
+<script>
+
+const movie=localStorage.getItem("movie");
+const seats=localStorage.getItem("seats");
+const total=localStorage.getItem("total");
+
+document.getElementById("movie").innerText=movie;
+document.getElementById("seats").innerText=seats;
+document.getElementById("total").innerText=total;
+
+function pay(){
+
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+
+if(!name||!email){
+alert("Nhập đủ thông tin");
+return;
+}
+
+window.location.href="confirm.html";
+
+}
+
+</script>
+
+</body>
+</html>
