@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Xác nhận vé</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center">Xác nhận đặt vé</h2>
+
+<div class="payment-box">
+
+<p>Phim: <span id="movie"></span></p>
+<p>Ghế: <span id="seats"></span></p>
+<p>Tổng tiền: <span id="total"></span> VND</p>
+
+<h3>Thông tin người đặt</h3>
+
+<input id="name" placeholder="Họ và tên">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Số điện thoại">
+
+<br><br>
+
+<button class="btn-book" onclick="confirmTicket()">
+Xác nhận đặt vé
+</button>
+
+<button class="btn-book" onclick="cancelTicket()" style="background:red">
+Huỷ vé
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+const movie = localStorage.getItem("movie");
+const seats = localStorage.getItem("seats");
+const total = localStorage.getItem("total");
+
+document.getElementById("movie").innerText = movie;
+document.getElementById("seats").innerText = seats;
+document.getElementById("total").innerText = total;
+
+function confirmTicket(){
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+
+if(!name || !email || !phone){
+alert("Vui lòng nhập đầy đủ thông tin");
+return;
+}
+
+document.getElementById("msg").innerText="🎉 Đặt vé thành công";
+
+}
+
+function cancelTicket(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:black;
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.logo{
+color:#ff00cc;
+font-weight:bold;
+}
+
+nav a{
+margin:10px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#ff00cc;
+}
+
+
+/* BANNER */
+
+.banner{
+height:350px;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("images/banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.banner-overlay{
+text-align:center;
+}
+
+
+/* MOVIES */
+
+.movie-grid{
+display:flex;
+gap:20px;
+padding:20px;
+}
+
+.movie{
+background:#1c1c1c;
+padding:15px;
+border-radius:12px;
+box-shadow:0 0 20px #ff00cc;
+}
+
+.movie img{
+width:200px;
+border-radius:10px;
+}
+
+
+/* BUTTON */
+
+.btn-book{
+padding:10px 20px;
+background:linear-gradient(45deg,#ff00cc,#ff5be1);
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+}
+
+
+/* TRAILER */
+
+#detailSection{
+padding:20px;
+text-align:center;
+}
+
+#trailer{
+width:700px;
+height:400px;
+border-radius:12px;
+margin-top:20px;
+}
+
+
+/* BOOKING */
+
+.booking-layout{
+display:flex;
+gap:40px;
+padding:20px;
+}
+
+.area-box li{
+padding:10px;
+background:#1c1c1c;
+margin:5px;
+cursor:pointer;
+border-radius:8px;
+}
+
+.area-box li:hover{
+background:#ff00cc;
+}
+
+.cinema-box button{
+margin:5px;
+padding:8px;
+background:#333;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.cinema-box button:hover{
+background:#ff00cc;
+}
+
+
+/* SCREEN */
+
+.screen-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:20px;
+}
+
+.screen-text{
+margin-bottom:8px;
+font-weight:bold;
+}
+
+.screen-bar{
+width:600px;
+height:20px;
+background:linear-gradient(to right,#ff00cc,#fff,#ff00cc);
+border-radius:50px;
+box-shadow:0 0 20px #ff00cc;
+}
+
+
+/* SEATS */
+
+.seats-grid{
+display:grid;
+grid-template-columns:repeat(12,40px);
+gap:10px;
+justify-content:center;
+}
+
+.seat{
+width:35px;
+height:35px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:6px;
+cursor:pointer;
+}
+
+.normal{
+background:#d8c4ff;
+color:black;
+}
+
+.vip{
+background:#ffc4c4;
+color:black;
+}
+
+.selected{
+background:#ff00cc !important;
+}
+
+
+/* PAYMENT */
+
+.payment-box{
+text-align:center;
+margin-top:20px;
+}
+
+.payment-box input{
+display:block;
+margin:10px auto;
+padding:10px;
+width:300px;
+border-radius:6px;
+border:none;
+}
+
+.hidden{
+display:none;
+}
