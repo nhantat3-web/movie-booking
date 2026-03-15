@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-
-  movie-booking:
-    build: .
-    container_name: movie-booking-container
-    ports:
-      - "8080:80"
